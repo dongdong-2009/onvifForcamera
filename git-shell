@@ -1,5 +1,5 @@
 提交更新：
-sudo git commit -a -m "20180125：test"
+sudo git commit -a -m "20180422:init"
 git push origin master
 
 添加文件到库，并上传

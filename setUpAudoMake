@@ -1,0 +1,44 @@
+  git config --global user.email "piaoyaosuifengji@sina.com"
+  git config --global user.name "piaoyaosuifengji"
+
+
+touch Makefile.am
+在  configure.ac中加入
+AC_CONFIG_FILES([Makefile])
+
+
+
+sudo apt install autoconf aclocal  autoconf
+sudo apt-get install libglib2.0-dev
+
+运行
+ #autoscan
+aclocal
+automake --add-missing 
+autoconf
+./configure
+
+
+
+最后修改makefile
+LIBS = -lpthread  -lhiredis    //  for  hiredis lib  libcairo
+LIBS = -lpthread  -lhiredis -L /usr/lib/x86_64-linux-gnu -lcairo
+neroMain_CFLAGS = -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   -I/usr/include/cairo
+#####  CFLAGS = -g -O2 -fno-omit-frame-pointer -ggdb    这个现在不需要加，用perf做性能分析才需要
+CFLAGS = -g -O2 -fno-omit-frame-pointer -ggdb
+all: config.h
+	$(MAKE) $(AM_MAKEFLAGS) all-am
+	./$(bin_PROGRAMS)
+d:
+	gdb $(bin_PROGRAMS)
+c:
+	rm *.o ./common/*.o ./NeuralNetwork/*.o ./tools/*.o   neroMain
+
+make >filename 2>&1
+
+
+
+
+
+
+-mcmodel=medium
