@@ -1,0 +1,113 @@
+提交更新：
+sudo git commit -a -m "20180125：test"
+git push origin master
+
+添加文件到库，并上传
+$ git add .     提交所有文件
+git add readme.txt
+git commit   -m "give a new file"
+git push origin master
+git push origin ver0.1803:ver0.1803
+显示所有分支
+	 git branch -v
+创建一个新的分支
+	git branch ver0.1801
+要切换到其他分支
+	git checkout testing
+要新建并切换到该分支
+	git checkout -b iss53
+将分支testing合并到master
+	git checkout master
+	git merge ver0.1702
+push本地分支代码到远端服务器,如果没有就创建该分支
+	 git push origin  testing
+删除分支
+	git branch -d testing
+查看本地分支
+	git branch
+查看远程分支
+	git branch --remote
+获取远程分支
+	/////git pull origin master:ver0.14
+	已经克隆下来整个项目后你本地其实已经有所有分支的数据了，只是没有本地分支而已
+	git checkout -t origin/ver0.15
+查看远程和本地所有分支，用-a参数
+	git branch -a
+删除远程分支
+	git push origin --delete testing
+	git push origin :ver0.1702
+提交分支数据到远程服务器
+	git push origin <local_branch_name>:<remote_branch_name>
+	git push origin ver0.1701:ver0.1701
+
+	git push origin <local_branch_name>:<remote_branch_name>
+	git push origin  ver0.1701:ver0.1701
+	git push origin master
+列出版本库中所有已删除的文件
+	git log --diff-filter=D --summary
+
+
+  sudo /usr/share/code/code --unity-launch 
+
+
+eval "$(ssh-agent -s)"
+ssh-add
+
+Git怎么查看某次提交某个文件的修改
+git 看某次commit改了哪些文件
+git log 查看commit的历史
+git show <commit-hash-id>查看某次commit的修改内容
+git log -p <filename>查看某个文件的修改历史
+git log -p -2查看最近2次的更新内容
+
+
+
+ axel -n 100
+aria2c -j 100 -s 10 -x 15
+
+git config --global user.email "piaoyaosuifengji@sina.com"
+git config --global user.name "piaoyaosuifengji"
+
+
+////////////cairo
+pkg-config --cflags --libs cairo
+
+git clone git@github.com:piaoyaosuifengji/onvifForcamera.git
+
+重新配置git：
+ ssh-keygen -t rsa -C "piaoyaosuifengji@sina.com"
+添加ssh公钥后重新配置code：
+ ssh-keygen  -T git@git.coding.net  
+git clone https://git.coding.net/piaoyaosuifengji/nero.git
+
+1.获取源码：
+ git clone git@github.com:jianfengye/nginx-1.0.14_comment.git
+
+
+ 
+git clone --depth=1 https://www.github.com/piaoyaosuifengji/nero.git
+#添加文件脚本：
+git add *
+git commit  -a -m "begin:"
+
+git push origin master
+
+ 
+
+
+info breakpoints
+
+gdb neroMain
+file  ./tools/Nero_Task.c
+file  ./NeuralNetwork/NeuralOperating.c
+b  Process_ObjForecast
+b NeuralNetwork.c:3778
+b NeuralOperating.c:2622
+b NeuralOperating.c:2662
+NeuralNetwork.c
+
+ b 3815
+
+
+
+grep -rn "Create vector of fbank centre frequencies" *
